@@ -120,8 +120,10 @@ function App() {
               return (
                 <React.Fragment key={user.id}>
                   <div data-test-id="guest">
-                    <p data-test-id="guest">name: {user.name}</p>
-                    <p data-test-id="guest">surname: {user.surname}</p>
+                    <span>
+                      {user.name} {user.surname}
+                    </span>
+
                     <button
                       aria-label={`Remove ${user.name} ${user.surname}`}
                       onClick={() => {
@@ -132,7 +134,6 @@ function App() {
                       Remove
                     </button>
                     <input
-                      data-test-id="guest"
                       aria-label={`${user.name} ${user.surname} ${user.attending}`}
                       type="checkbox"
                       checked={user.attending}
