@@ -132,6 +132,7 @@ function App() {
                       Remove
                     </button>
                     <input
+                      data-test-id="guest"
                       aria-label={`${user.name} ${user.surname} ${user.attending}`}
                       type="checkbox"
                       checked={user.attending}
