@@ -8,8 +8,6 @@ function App() {
   const [guests, setGuests] = useState([]);
   const [refetch, setRefetch] = useState(true);
   const [loading, setLoading] = useState(true);
-  const inputName = useRef(null);
-  const inputSurname = useRef(null);
   useEffect(() => {
     async function fetchGuests() {
       const response = await fetch(`${baseUrl}/guests`);
