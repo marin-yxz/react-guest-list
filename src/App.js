@@ -134,7 +134,7 @@ function App() {
                       Remove
                     </button>
                     <input
-                      aria-label="user.attending"
+                      aria-label="attending"
                       type="checkbox"
                       checked={user.attending}
                       key={user.id}
