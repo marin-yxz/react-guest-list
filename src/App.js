@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const baseUrl = 'https://express-api-guest-list.herokuapp.com';
 function App() {
