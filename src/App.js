@@ -81,35 +81,29 @@ function App() {
 
   return (
     <div className="App">
-      <form>
-        <label>
-          {' '}
-          First name
-          <input
-            value={firstname}
-            onChange={(event) => {
-              setFirstname(event.currentTarget.value);
-            }}
-            disabled={loading}
-          />
-        </label>
-        <label>
-          {' '}
-          Last name
-          <input
-            value={lastname}
-            onChange={(event) => {
-              setLastname(event.currentTarget.value);
-            }}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') {
-                postGuest().catch({});
-              }
-            }}
-            disabled={loading}
-          />
-        </label>
-      </form>
+      <label htmlFor={firstname}>First name </label>
+      <input
+        value={firstname}
+        onChange={(event) => {
+          setFirstname(event.currentTarget.value);
+        }}
+        disabled={loading}
+      />
+
+      <label htmlFor={lastname}>Last name </label>
+      <input
+        value={lastname}
+        onChange={(event) => {
+          setLastname(event.currentTarget.value);
+        }}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            postGuest().catch({});
+          }
+        }}
+        disabled={loading}
+      />
+
       <button
         onClick={() => {
           deleteAll(guests).catch({});
