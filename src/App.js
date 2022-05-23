@@ -85,15 +85,16 @@ function App() {
         <label>
           First name
           <input
+            disabled={loading ? true : false}
             onChange={(event) => {
               setFirstname(event.currentTarget.value);
             }}
-            disabled={loading}
           />
         </label>
         <label>
           Last name
           <input
+            disabled={loading ? true : false}
             onChange={(event) => {
               setLastname(event.currentTarget.value);
             }}
@@ -102,7 +103,6 @@ function App() {
                 postGuest().catch({});
               }
             }}
-            disabled={loading}
           />
         </label>
       </div>
