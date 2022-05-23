@@ -1,5 +1,5 @@
-const baseUrl = 'http://localhost:4000';
-
+const baseUrl = 'https://express-api-guest-list.herokuapp.com';
+let refetch = '';
 export const postGuests = async (first, last) => {
   await fetch(`${baseUrl}/guests`, {
     method: 'POST',
@@ -12,6 +12,7 @@ export const postGuests = async (first, last) => {
       attending: 'false',
     }),
   });
+  return (refetch = 'post');
 };
 
 export const fetchGuests = async () => {
