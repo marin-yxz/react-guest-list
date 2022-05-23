@@ -84,7 +84,6 @@ function App() {
       <div className="form">
         <label htmlFor={firstname}>First name</label>
         <input
-          value={firstname}
           onChange={(event) => {
             setFirstname(event.currentTarget.value);
           }}
@@ -93,7 +92,6 @@ function App() {
 
         <label htmlFor={lastname}>Last name</label>
         <input
-          value={lastname}
           onChange={(event) => {
             setLastname(event.currentTarget.value);
           }}
