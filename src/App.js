@@ -81,7 +81,8 @@ function App() {
 
   return (
     <div className="App">
-      <form>
+      {' '}
+      <form className="form">
         <label htmlFor={firstname}>First name </label>
         <input
           value={firstname}
@@ -90,7 +91,8 @@ function App() {
           }}
           disabled={loading}
         />
-
+      </form>
+      <form className="form">
         <label htmlFor={lastname}>Last name </label>
         <input
           value={lastname}
