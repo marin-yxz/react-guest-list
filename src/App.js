@@ -113,7 +113,9 @@ function App() {
       >
         Remove All Users
       </button>
-      {!loading ? (
+      {loading ? (
+        <h2>Loading...</h2>
+      ) : (
         <div>
           <div>
             {guests.map((user) => {
@@ -148,8 +150,6 @@ function App() {
             })}
           </div>
         </div>
-      ) : (
-        <p>Loading...</p>
       )}
     </div>
   );
