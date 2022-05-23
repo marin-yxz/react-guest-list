@@ -21,11 +21,13 @@ function App() {
         };
       });
       setGuests(cleanedUsers);
+      setTimeout(() => {
+        setLoading(false);
+      }, '1000');
     }
     fetchGuests().catch(() => {
       console.log('fetch fails');
     });
-    setLoading(false);
   }, [refetch]);
 
   //
