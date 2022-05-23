@@ -8,7 +8,6 @@ function App() {
   const [guests, setGuests] = useState([]);
   const [refetch, setRefetch] = useState(true);
   const [loading, setLoading] = useState(true);
-  const [attendanceCheck, setAttendanceCheck] = useState('');
   useEffect(() => {
     async function fetchGuests() {
       const response = await fetch(`${baseUrl}/guests`);
