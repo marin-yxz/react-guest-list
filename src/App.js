@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const baseUrl = 'https://express-api-guest-list.herokuapp.com';
 function App() {
@@ -8,6 +8,8 @@ function App() {
   const [guests, setGuests] = useState([]);
   const [refetch, setRefetch] = useState(true);
   const [loading, setLoading] = useState(true);
+  const inputName = useRef(null);
+  const inputSurname = useRef(null);
   useEffect(() => {
     async function fetchGuests() {
       const response = await fetch(`${baseUrl}/guests`);
@@ -43,6 +45,8 @@ function App() {
         attending: 'false',
       }),
     });
+    setFirstname('');
+    setLastname('');
     setRefetch(!refetch);
   };
 
@@ -84,6 +88,7 @@ function App() {
           First name
           <input
             disabled={loading ? true : false}
+            value={firstname}
             onChange={(event) => {
               setFirstname(event.currentTarget.value);
             }}
@@ -93,6 +98,7 @@ function App() {
           Last name
           <input
             disabled={loading ? true : false}
+            value={lastname}
             onChange={(event) => {
               setLastname(event.currentTarget.value);
             }}
