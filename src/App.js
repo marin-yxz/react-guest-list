@@ -84,7 +84,7 @@ function App() {
       <form>
         <label>
           {' '}
-          First Name
+          First name
           <input
             value={firstname}
             onChange={(event) => {
@@ -95,7 +95,7 @@ function App() {
         </label>
         <label>
           {' '}
-          Last Name
+          Last name
           <input
             value={lastname}
             onChange={(event) => {
