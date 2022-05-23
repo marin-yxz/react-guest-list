@@ -120,8 +120,8 @@ function App() {
               return (
                 <React.Fragment key={user.id}>
                   <div data-test-id="guest">
-                    <p>name: {user.name}</p>
-                    <p>surname: {user.surname}</p>
+                    <p data-test-id="guest">name: {user.name}</p>
+                    <p data-test-id="guest">surname: {user.surname}</p>
                     <button
                       aria-label={`Remove ${user.name} ${user.surname}`}
                       onClick={() => {
