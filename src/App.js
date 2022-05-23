@@ -81,9 +81,8 @@ function App() {
 
   return (
     <div className="App">
-      {' '}
-      <form className="form">
-        <label htmlFor={firstname}>First name </label>
+      <div className="inputArea">
+        <label htmlFor={firstname}>First name</label>
         <input
           value={firstname}
           onChange={(event) => {
@@ -91,9 +90,8 @@ function App() {
           }}
           disabled={loading}
         />
-      </form>
-      <form className="form">
-        <label htmlFor={lastname}>Last name </label>
+
+        <label htmlFor={lastname}>Last name</label>
         <input
           value={lastname}
           onChange={(event) => {
@@ -106,7 +104,7 @@ function App() {
           }}
           disabled={loading}
         />
-      </form>
+      </div>
       <button
         onClick={() => {
           deleteAll(guests).catch({});
