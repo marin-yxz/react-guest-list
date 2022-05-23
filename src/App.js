@@ -12,6 +12,7 @@ function App() {
     async function fetchGuests() {
       const response = await fetch(`${baseUrl}/guests`);
       const allGuests = await response.json();
+      setLoading(false);
       const cleanedUsers = await allGuests.map((user) => {
         return {
           name: user.firstName,
@@ -21,9 +22,6 @@ function App() {
         };
       });
       setGuests(cleanedUsers);
-      setTimeout(() => {
-        setLoading(false);
-      }, '1000');
     }
     fetchGuests().catch(() => {
       console.log('fetch fails');
